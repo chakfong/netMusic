@@ -1,0 +1,24 @@
+<!--pages/music/music.wxml-->
+<import src="music-list/music-list-tpl.wxml" />
+<import src="music-grid/music-grid-tpl.wxml" />
+
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="hop" 
+  placeholder-class="placeholder" bindfocus="onBindFocus" value="{{inputValue}}"
+  bindconfirm="onBindConfirm"/>
+  <image wx:if="{{searchPanelShow}}" src="/images/icon/wx_app_xx.png" class="xx-img" catchtap="onCancelImgTap"></image>
+</view>
+
+<view class="container" wx:if="{{containerShow}}">
+  <view class="musics-template">
+    <template is="musicListTpl" data="{{...highQualitySongList}}" />
+  </view>
+  <view class="musics-template">
+    <template is="musicListTpl" data="{{...hotSongList}}"/>
+  </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <template is="musicGridTpl" data="{{...searchResult}}"/>
+</view>
