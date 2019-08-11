@@ -1,0 +1,178 @@
+/* pages/music/music-detail/music-detail.wxss */
+page{
+	background-color: #888;
+}
+.bottom-container{
+	width:100%;
+	height:120rpx;
+	position:fixed;
+	background-color:#555;
+	bottom:0rpx;
+	border-radius:20rpx 20rpx 0 0;
+	z-index:999;
+	display:flex;
+	flex-direction: row;
+}
+.playingPic{
+	width:80rpx;
+	height:80rpx;
+	margin:20rpx 0 20rpx 20rpx;
+	border-radius: 10rpx;
+}
+.musicInfo{
+	display: flex;
+	margin: 20rpx 50rpx 0 10rpx;
+	width:380rpx;
+	flex-direction: column;
+	font-size:22rpx;
+	color:#ddd;
+	white-space: nowrap;
+	overflow: hidden;
+  text-overflow:ellipsis; 
+}
+.songButton{
+	height:70rpx;
+	width:70rpx;
+	margin:25rpx 30rpx 0 0;
+}
+.container{
+	/* margin-top:80rpx; */
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	position:absolute;
+	top:0rpx;
+	left:0rpx;
+}
+
+.head-img{
+    width:100%;
+    height: 550rpx;
+    -webkit-filter:blur(30px);
+}
+.head-container{
+	display:flex;
+	flex-direction:row;
+}
+.musicListImg{
+	margin:50rpx 30rpx 50rpx 30rpx
+}
+.MLImg{
+	height:350rpx;
+	width:350rpx;
+}
+
+.musicListInfo{
+	width:340rpx;
+	height:340rpx;
+	margin:50rpx 30rpx 50rpx  0rpx;
+}
+
+.title{
+	margin-top:30rpx;
+	color:#ddd;
+}
+.user{
+	display:flex;
+	flex-direction: row;
+	margin: 100rpx auto 50rpx auto;
+}
+
+.userName{
+	margin-left:28rpx;
+	font-size:30rpx;
+	color:#ddd;
+}
+.userImg{
+	width:50rpx;
+	height:50rpx;
+	border-radius:50%;
+}
+
+.namesyspic{
+	width:18rpx;
+	height:28rpx;
+	vertical-align:bottom;
+	margin-left:15rpx;
+	margin-top:8rpx;
+}
+
+.button-container{
+	display:flex;
+	flex-direction:row;
+}
+
+.button{
+	display:flex;
+	flex-direction:column;
+	width:33%;
+	font-size:28rpx;
+}
+
+.buttonImg{
+	height:60rpx;
+	width:60rpx;
+	margin:auto;
+}
+
+.buttonText{
+	size:30rpx;
+	text-align:center;
+	margin-top:10rpx;
+	color:#ddd;
+}
+
+.musicList-container{
+	margin-top:20rpx;
+	display:flex;
+	flex-direction: column;
+	border-radius: 50rpx 50rpx 0 0 ;
+	background-color:#444;
+}
+
+.description-container{
+	display:flex;
+	flex-direction: column;
+	margin-top:40rpx;
+}
+.tag{
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+	display: flex;
+	flex-direction: row;
+	font-size:28rpx;
+	color:#eee;
+}
+.tagItem{
+	margin-left:20rpx;
+}
+.description{
+	margin:30rpx 30rpx;
+	height:200rpx;
+	overflow: auto;
+	color:#ddd;
+	font-size:30rpx;
+}
+.musicList{
+	padding:0 30rpx 150rpx 30rpx;
+}
+.songItem{
+	border-top-style:dotted;
+	border-width:1rpx;
+	border-color :rgb(102, 102, 102);
+	padding:12rpx 50rpx 12rpx 0rpx;
+}
+.songText{
+	color:#ccc;
+	overflow: hidden;
+	display: block;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}
+.singerText{
+	color:#aaa;
+	display: block;
+	overflow: hidden;
+  text-overflow:ellipsis; 
+  white-space: nowrap;
+}

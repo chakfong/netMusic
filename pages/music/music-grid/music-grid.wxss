@@ -1,0 +1,14 @@
+@import "../single-music/music.wxss";
+page{
+	background-color: #444;
+}
+.grid-container{
+    height: 1300rpx;
+    margin:40rpx 0 40rpx 20rpx;
+		padding-bottom: 120rpx;
+}
+.single-view-container{
+    float:left;
+    /* margin-bottom: 5rpx; */
+		/* border:black solid 1rpx; */
+}

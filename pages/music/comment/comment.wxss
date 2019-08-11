@@ -1,0 +1,85 @@
+/* pages/music/comment/comment.wxss */
+
+page {
+  background: #444;
+  height: 100%;
+}
+
+.comment-detail-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.comment-main-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0rpx;
+  right: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comment-item {
+  margin: 20rpx 0 20rpx 24rpx;
+  padding: 24rpx 24rpx 24rpx 0;
+  border-bottom: 1rpx solid #f2e7e1;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-title {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #ddd;
+  border-bottom: 1px solid #ccc;
+  margin-left: 24rpx;
+  padding: 8rpx 0;
+  font-family: Microsoft YaHei;
+  text-shadow: 3rpx 3rpx black;
+}
+
+.comment-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-item-header .left-img image {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.comment-item-header .right-user {
+  margin-left: 30rpx;
+  line-height: 80rpx;
+}
+
+.comment-item-header .right-user text {
+  font-size: 26rpx;
+  color: #aaa;
+  text-shadow: 3rpx 3rpx black;
+}
+
+.comment-body {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #ccc;
+  padding: 0rpx 0rpx 0rpx 100rpx;
+}
+
+.comment-txt text {
+  line-height: 50rpx;
+}
+
+.comment-time {
+  margin-top: 10rpx;
+  color: #ccc;
+  font-size: 24rpx;
+  text-align: right;
+}

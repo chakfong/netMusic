@@ -1,0 +1,72 @@
+<!--pages/music/music-detail/music-detail.wxml-->
+<image class='head-img' src="{{coverImgUrl}}" mode="aspectFill"></image>
+<view class='bottom-container' catchtap="showMusicDetailTap">
+		<image class='playingPic' wx:if='{{playingPic==null}}' src="/images/icon/wx_app_play.png"></image>
+		<image class='playingPic' wx:else src="{{playingPic}}"></image>
+		<view class="musicInfo">
+			<text style="color:#eee;font-size:30rpx;"> {{playingName}}</text>
+			<text >{{playingSinger}}</text>
+		</view>
+		<image class="songButton" catchtap="pauseTap" wx:if="{{isPlaying}}" src="/images/icon/wx_app_pause.png">
+		</image>
+		<image class="songButton" catchtap="playTap" wx:else src="/images/icon/wx_app_play.png">
+		</image>
+		<image class="songButton" catchtap="nextSongTap" src="/images/icon/wx_app_next.png"></image>
+</view>
+<view class='container'>
+  <view class='head-container'>
+    <view class='musicListImg'>
+      <image class='MLImg' src="{{coverImgUrl}}"></image>
+    </view>
+    <view class='musicListInfo'>
+      <view class='title'>
+        <text>{{name}}</text>
+      </view>
+      <view class='user'>
+        <image class='userImg' src="{{creater_avatarUrl}}"></image>
+        <view class='userName'>
+          <text>{{create_nickname}}</text>
+        </view>
+        <image class='namesyspic' src="/images/icon/wx_app_arrow_right_white.png">
+        </image>
+      </view>
+    </view>
+  </view>
+  <view class='button-container'>
+    <view class='button'>
+      <image class='buttonImg'  catchtap="onCommentTap" src="/images/icon/message.png"></image>
+      <text class='buttonText'>{{commentCount}}</text>
+    </view>
+    <view class='button'>
+      <image class='buttonImg' wx:if="{{subsribed}}" src="/images/icon/wx_app_collected.png"></image>
+      <image class='buttonImg' wx:else src="/images/icon/wx_app_collect_white.png"></image>
+      <text class='buttonText'>{{subscribedCount}}</text>
+    </view>
+    <view class='button'>
+      <image class='buttonImg' src="/images/icon/wx_app_view_white.png"></image>
+      <text class='buttonText'>{{playCount}}</text>
+    </view>
+  </view>
+  <view class='musicList-container'>
+    <view wx:if="{{expertTags!=null&&description!=null}}" class='description-container'>
+      <view wx:if="{{expertTags!=null}}" class='tag'>
+        <text >标签:</text>
+        <view wx:for="{{expertTags}}" wx:for-item='tag' wx:key="*this">
+          <view class="tagItem">
+            <text>{{tag}}</text>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{description!=null}}" class='description'>
+        <text>{{description}}</text>
+      </view>
+    </view>
+    <view class='musicList'>
+      <view class='songItem' catchtap="onMusicTap" data-song="{{song}}" wx:for="{{songs}}" wx:for-item="song" wx:key="song.id">
+        <text class='songText'>{{song.name}}\n</text>
+        <text class='singerText'>{{song.artists[0].name}}</text>
+      </view>
+      <hr></hr>
+    </view>
+  </view>
+</view>

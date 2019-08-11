@@ -1,0 +1,19 @@
+<import src="../single-music/music.wxml" />
+<template name="musicListTpl">
+  <view class="music-list-container">
+    <view class="inner-container">
+      <view class="music-head">
+        <text class="slogan">{{categoryTitle}}</text>
+        <view catchtap="onMoreTap" class="more" data-category="{{categoryTitle}}">
+          <text class="more-text">更多</text>
+          <image class="more-img" src="/images/icon/wx_app_arrow_right_white.png"></image>
+        </view>
+      </view>
+      <view class="musics-container">
+      <block wx:for="{{musicLists}}" wx:for-item="musicList" wx:key="musicList.musicListId">
+        <template is="musicTpl" data="{{...musicList}}"/>
+      </block>
+      </view>
+    </view>
+  </view>
+</template>

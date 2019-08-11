@@ -1,11 +1,19 @@
 <!--index.wxml-->
-<view class="container">
+<view  class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+		<text class="title"> 网易云帐号登录 </text>
+     <view class="inputItem">
+      <text>手机：</text>
+      <input style="color:#ddd" auto-focus bindinput="textinput" data-type="1" type="text"  />
+    </view>
+    <view class="inputItem">
+      <text>密码：</text>
+      <input  bindinput="textinput" data-type="2" type="text" password="true" />
+    </view>
+		<view class="submitItem">
+    <button catchtap="login"  type="warn">帐号登录</button>
+		<button catchtap="bindViewTap"  type="warn">免密登录</button>
+		</view>
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>

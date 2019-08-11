@@ -1,0 +1,18 @@
+<!--pages/music/more-music/more-music.wxml-->
+<import src="../music-grid/music-grid.wxml" />
+<view class="more-container">
+<template is="musicGridTpl" data="{{musicLists}}" />
+</view>
+<view class='bottom-container' catchtap="showMusicDetailTap">
+		<image class='playingPic' wx:if='{{playingPic==null}}' src="/images/icon/wx_app_play.png"></image>
+		<image class='playingPic' wx:else src="{{playingPic}}"></image>
+		<view class="musicInfo">
+			<text style="color:#eee;font-size:30rpx;"> {{playingName}}</text>
+			<text >{{playingSinger}}</text>
+		</view>
+		<image class="songButton" catchtap="pauseTap" wx:if="{{isPlaying}}" src="/images/icon/wx_app_pause.png">
+		</image>
+		<image class="songButton" catchtap="playTap" wx:else src="/images/icon/wx_app_play.png">
+		</image>
+		<image class="songButton" catchtap="nextSongTap" src="/images/icon/wx_app_next.png"></image>
+</view>

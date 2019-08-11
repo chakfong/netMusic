@@ -1,0 +1,29 @@
+.music-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rpx;
+	/* border:black solid 2rpx; */
+	height:340rpx;
+}
+
+.music-img {
+  width: 230rpx;
+  height: 230rpx;
+  /* padding-bottom: 20rpx; */
+	border-radius:3% 3% 3% 3%;
+}
+
+.music-title{
+	display: -webkit-box;
+	margin-top:10rpx;
+	margin-bottom: 16rpx;
+	width: 230rpx;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color:#bbb;
+	-webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+	/* white-space: nowrap; */
+	text-overflow:ellipsis; 
+	overflow: hidden;
+}

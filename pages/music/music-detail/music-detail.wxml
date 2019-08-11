@@ -1,0 +1,35 @@
+<!--pages/music/music-detail/music-detail.wxml-->
+<image class='head-img' src="{{playingPic}}" mode="aspectFill"></image>
+<view class="container">
+  <image class="playingPic" src="{{playingPic}}" mode="aspectFill"></image>
+</view>
+<view class="bottom-container">
+  <view class="button-container">
+    <view class='button'>
+      <image class='buttonImg' catchtap='onCommentsTap' data-music-id="{{musicId}}" src="/images/icon/message.png"></image>
+      <text class='buttonText'>{{commentCount}}</text>
+    </view>
+    <view class='button'>
+      <image class='buttonImg' wx:if="{{subsribed}}" src="/images/icon/wx_app_collected.png"></image>
+      <image class='buttonImg' wx:else src="/images/icon/wx_app_collect_white.png"></image>
+      <text class='buttonText'>{{subscribedCount}}</text>
+    </view>
+    <view class='button'>
+      <image class='buttonImg' src="/images/icon/wx_app_list_white.png"></image>
+			 <text class='buttonText'>{{subscribedCount}}</text>
+    </view>
+  </view>
+  <view class="time">
+    <text>{{playingTimeFormat}}</text>
+    <text style="color:#ddd">{{maxTimeFormat}}</text>
+  </view>
+  <view class="slider">
+    <slider block-size="20" activeColor="#d11" bindchange="change" max="{{playingTime}}" value="{{playingCurrentTime}}" />
+  </view>
+  <view class="musicButton">
+    <image catchtap="prevSongTap" src="/images/icon/wx_app_pre.png"></image>
+    <image catchtap="audioPause" wx:if="{{isPlaying}}" src="/images/icon/wx_app_pause.png"></image>
+    <image catchtap="audioPlay" wx:else src="/images/icon/wx_app_play.png"></image>
+    <image catchtap="nextSongTap" src="/images/icon/wx_app_next.png"></image>
+  </view>
+</view>

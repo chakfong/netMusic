@@ -1,0 +1,45 @@
+@import "../single-music/music.wxss";
+
+.music-list-container {
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-container{
+    margin: 0  auto 20rpx;
+}
+
+.music-head {
+  padding: 30rpx 20rpx 22rpx;
+}
+
+.slogan {
+	color:#bbb;
+  font-size: 32rpx;
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  vertical-align: middle;
+  margin-right: 10rpx;
+	font-size: 32rpx;
+  color:#bbb;
+}
+
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.musics-container{
+    display:flex;
+    flex-direction: row;
+		width:100%;
+		flex-wrap: wrap;
+		padding-left:20rpx;
+}

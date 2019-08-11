@@ -1,0 +1,8 @@
+<template name="musicTpl">
+  <view class="music-container" catchtap="onMusicTap" data-type="{{isSong}}" data-music-id="{{musicListId}}">
+    <image class="music-img" src="{{coverageUrl}}"></image>
+    <text wx:if="{{isSong}}" class="music-title">{{title}}-{{songDetail.singer}}</text>
+		
+		 <text wx:else class="music-title">{{title}}</text>
+  </view>
+</template>

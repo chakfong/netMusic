@@ -1,12 +1,19 @@
 {
 	"pages": [
 		"pages/index/index",
-		"pages/music/music"
+		"pages/music/music",
+		"pages/music/musicList-detail/musicList-detail",
+		"pages/music/music-detail/music-detail",
+		"pages/music/more-music/more-music",
+		"pages/music/comment/comment"
 	],
 	"window": {
 		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#fff",
-		"navigationBarTitleText": "WeChat",
+		"navigationBarBackgroundColor": "#444",
 		"navigationBarTextStyle": "black"
-	}
+	},
+
+	"requiredBackgroundModes": [
+		"audio","innerAudioContext"
+	]
 }

@@ -1,0 +1,39 @@
+@import "../music-grid/music-grid.wxss";
+.bottom-container{
+	width:100%;
+	height:120rpx;
+	position:fixed;
+	background-color:#555;
+	bottom:0rpx;
+	border-radius:20rpx 20rpx 0 0;
+	z-index:999;
+	display:flex;
+	flex-direction: row;
+}
+.playingPic{
+	width:80rpx;
+	height:80rpx;
+	margin:20rpx 0 20rpx 20rpx;
+	border-radius: 10rpx;
+}
+.musicInfo{
+	display: flex;
+	margin: 20rpx 50rpx 0 10rpx;
+	width:380rpx;
+	flex-direction: column;
+	font-size:22rpx;
+	color:#ddd;
+	white-space: nowrap;
+	overflow: hidden;
+  text-overflow:ellipsis; 
+}
+.songButton{
+	height:70rpx;
+	width:70rpx;
+	margin:25rpx 30rpx 0 0;
+}
+.more-container{
+	position:absolute;
+  top:0rpx;
+	padding-bottom: 150rpx;
+}

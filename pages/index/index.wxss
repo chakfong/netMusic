@@ -1,8 +1,49 @@
 /**index.wxss**/
+
+page {
+  background-color: #444;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background-color: #444;
+}
+
+.title {
+  font-size: 140%;
+  padding-bottom: 100rpx;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10%;
+}
+
+.inputItem {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+
+.inputItem input {
+  border-bottom: 1rpx solid #222;
+}
+
+text {
+  color: #ddd;
+}
+
+.inputItem text {
+  color: #ddd;
 }
 
 .userinfo-avatar {
@@ -16,6 +57,17 @@
   color: #aaa;
 }
 
+.submitItem {
+  display: flex;
+  flex-direction: row;
+}
+.submitItem button{
+	height:15%;
+  margin: 60rpx 60rpx;
+
+}
+
 .usermotto {
   margin-top: 200px;
+  color: #aaa;
 }

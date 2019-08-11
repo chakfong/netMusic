@@ -1,24 +1,56 @@
 <!--pages/music/music.wxml-->
-<import src="music-list/music-list-tpl.wxml" />
-<import src="music-grid/music-grid-tpl.wxml" />
-
+<import src="music-list/music-list.wxml" />
+<import src="music-grid/music-grid.wxml" />
+<!-- <view class="top-container"> -->
 <view class="search">
-  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
-  <input type="text" placeholder="hop" 
-  placeholder-class="placeholder" bindfocus="onBindFocus" value="{{inputValue}}"
-  bindconfirm="onBindConfirm"/>
-  <image wx:if="{{searchPanelShow}}" src="/images/icon/wx_app_xx.png" class="xx-img" catchtap="onCancelImgTap"></image>
-</view>
+  <icon type="search" class="search-img" size="13" color="#ddd"></icon>
+  <input type="text" placeholder="hop" placeholder-class="placeholder" bindfocus="onBindFocus" value="{{inputValue}}" bindconfirm="onBindConfirm" style="background-color:#333" />
 
+  <image wx:if="{{searchPanelShow}}" src="/images/icon/wx_app_xx_white.png" class="xx-img" color="#fff" catchtap="onCancelImgTap"></image>
+</view>
+<!-- <image wx:if="{{isPlaying}}" catchtap="onPlayingTap" class="playingImg" src="/images/icon/wx_app_music_red.gif"></image>
+	<image wx:else class="playingImg" catchtap="onPlayingTap" src="/images/icon/wx_app_music_red.png"></image> -->
+<!-- </view>  -->
 <view class="container" wx:if="{{containerShow}}">
+	<view class="profile" wx:if="{{isLogin}}">
+	<image class="myAvatarImg" mode="aspectFit" src="{{myAvatarImg}}"/>
+	<text class="nickname">欢迎您，{{nickname}}</text>
+	</view>
+  <view class="menuButtons">
+    <image class="menuButton" catchtap="onMenuButton" data-type="likesong" mode="aspectFit" src="/images/icon/netease_likesong.png"></image>
+    <image class="menuButton" catchtap="onMenuButton" data-type="commended" mode="aspectFit" src="/images/icon/netease_commended.png"></image>
+    <image class="menuButton" catchtap="onMenuButton" data-type="playlist" mode="aspectFit" src="/images/icon/netease_playlist.png"></image>
+  </view>
+  <view class="menuButtons">
+    <text> 红心歌曲 </text>
+    <text> 收藏歌单 </text>
+    <text> 我的歌单 </text>
+  </view>
   <view class="musics-template">
     <template is="musicListTpl" data="{{...highQualitySongList}}" />
   </view>
   <view class="musics-template">
-    <template is="musicListTpl" data="{{...hotSongList}}"/>
+    <template is="musicListTpl" data="{{...hotSongList}}" />
   </view>
 </view>
 
+	
+
 <view class="search-panel" wx:if="{{searchPanelShow}}">
-    <template is="musicGridTpl" data="{{...searchResult}}"/>
+  <template is="musicGridTpl" data="{{...searchResult}}" />
+</view>
+
+
+<view class='bottom-container' catchtap="showMusicDetailTap">
+  <image class='playingPic' wx:if='{{playingPic==null}}' src="/images/icon/wx_app_play.png"></image>
+  <image class='playingPic' wx:else src="{{playingPic}}"></image>
+  <view class="musicInfo">
+    <text style="color:#eee;font-size:30rpx;"> {{playingName}}</text>
+    <text>{{playingSinger}}</text>
+  </view>
+  <image class="songButton" catchtap="pauseTap" wx:if="{{isPlaying}}" src="/images/icon/wx_app_pause.png">
+  </image>
+  <image class="songButton" catchtap="playTap" wx:else src="/images/icon/wx_app_play.png">
+  </image>
+  <image class="songButton" catchtap="nextSongTap" src="/images/icon/wx_app_next.png"></image>
 </view>

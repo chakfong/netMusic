@@ -1,0 +1,10 @@
+<import src="../single-music/music.wxml" />
+<template name="musicGridTpl">
+  <view class="grid-container">
+    <block wx:for="{{musicLists}}" wx:for-item="musicList" wx:key="musicList.musicListId">
+      <view class="single-view-container">
+        <template is="musicTpl" data="{{...musicList}}" />
+      </view>
+    </block>
+  </view>
+</template>
